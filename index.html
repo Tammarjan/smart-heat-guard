@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#071426">
+
+    <title>SMART HEAT GUARD – Sindh</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="app-container">
+
+    <header class="header">
+        <div class="brand">
+            <div class="logo">☀️</div>
+            <div>
+                <h1>SMART HEAT GUARD</h1>
+                <p>HEATWAVE SAFETY SYSTEM</p>
+            </div>
+        </div>
+
+        <div class="status">
+            <span class="status-dot"></span>
+            SYSTEM ACTIVE
+        </div>
+    </header>
+
+    <main>
+
+        <!-- WELCOME -->
+
+        <section class="welcome">
+            <p class="eyebrow">SINDH • PAKISTAN</p>
+            <h2>Stay Cool.<br><span>Stay Protected.</span></h2>
+            <p>Smart heatwave monitoring and hydration assistant.</p>
+        </section>
+
+
+        <!-- WEATHER -->
+
+        <section class="card">
+
+            <div class="section-heading">
+                <div>
+                    <span class="tag">01 / WEATHER</span>
+                    <h3>Weather Conditions</h3>
+                </div>
+                <span class="weather-icon">🌡️</span>
+            </div>
+
+            <label class="field-label">Select Your City</label>
+
+            <select id="citySelect" class="weight-input">
+                <option value="karachi">Karachi</option>
+                <option value="hyderabad">Hyderabad</option>
+                <option value="sukkur">Sukkur</option>
+                <option value="larkana">Larkana</option>
+                <option value="nawabshah">Nawabshah</option>
+                <option value="jacobabad">Jacobabad</option>
+                <option value="mithi">Tharparkar (Mithi)</option>
+                <option value="mirpurkhas">Mirpurkhas</option>
+                <option value="umerkot">Umerkot</option>
+            </select>
+
+            <button type="button" id="fetchWeatherBtn" class="weight-input weather-button">
+                🌐 GET LIVE WEATHER
+            </button>
+
+            <p id="weatherStatus" class="description weather-status">
+                Select a city and get current weather.
+            </p>
+
+            <div class="input-group">
+
+                <div class="input-title">
+                    <label>Temperature</label>
+                    <strong id="tempValue">43°C</strong>
+                </div>
+
+                <input type="range" id="temperature"
+                    min="-10" max="60" step="0.1" value="43">
+
+                <div class="range-labels">
+                    <span>-10°C</span>
+                    <span>60°C</span>
+                </div>
+
+            </div>
+
+            <div class="input-group">
+
+                <div class="input-title">
+                    <label>Humidity</label>
+                    <strong id="humidityValue">65%</strong>
+                </div>
+
+                <input type="range" id="humidity"
+                    min="0" max="100" step="1" value="65">
+
+                <div class="range-labels">
+                    <span>0%</span>
+                    <span>100%</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- PERSONAL INFORMATION -->
+
+        <section class="card">
+
+            <div class="section-heading">
+                <div>
+                    <span class="tag">02 / PERSONAL DATA</span>
+                    <h3>Your Information</h3>
+                </div>
+                <span class="weather-icon">👤</span>
+            </div>
+
+            <label class="field-label">Age (Years)</label>
+
+            <input type="range" id="age"
+                min="0" max="100" step="0.1" value="25">
+
+            <div class="slider-value">
+                Age: <span id="ageValue">25</span> years
+            </div>
+
+            <label class="field-label">Sex</label>
+
+            <select id="sex" class="weight-input">
+                <option value="">Select</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+
+            <label class="field-label">Physical Activity</label>
+
+            <select id="activity" class="weight-input">
+                <option value="low">Low Activity</option>
+                <option value="moderate" selected>Moderate Activity</option>
+                <option value="high">High Activity</option>
+            </select>
+
+        </section>
+
+
+        <!-- HEAT ANALYSIS -->
+
+        <section class="risk-card" id="riskCard">
+
+            <span class="tag">04 / LIVE ANALYSIS</span>
+
+            <h3>HEAT INDEX</h3>
+
+            <div class="temperature-display">
+                <span id="heatIndex">--</span>
+                <small>°C</small>
+            </div>
+
+            <div class="risk-badge" id="riskLevel">
+                CALCULATING...
+            </div>
+
+            <p id="riskMessage">
+                Analyzing weather conditions...
+            </p>
+
+            <p class="description heat-disclaimer">
+                Heat Index is an estimate for shaded areas with light wind.
+                Direct sunlight may increase heat exposure, while physical
+                activity can further increase heat stress.
+            </p>
+
+        </section>
+
+
+        <!-- HYDRATION -->
+
+        <section class="card">
+
+            <div class="section-heading">
+                <div>
+                    <span class="tag">05 / HYDRATION</span>
+                    <h3>Water & Fluid Guidance</h3>
+                </div>
+                <span class="weather-icon">💧</span>
+            </div>
+
+            <div class="water-display">
+                <span id="waterAmount">--</span>
+                <small>Litres / Day</small>
+            </div>
+
+            <p id="waterGuidance" class="description">
+                Enter your personal information to view hydration guidance.
+            </p>
+
+            <p class="description">
+                Reference values are not individual medical prescriptions.
+                Total water includes food and all beverages.
+            </p>
+
+        </section>
+
+
+        <!-- EMERGENCY -->
+
+        <section class="emergency-card">
+
+            <div>
+                <span class="tag">EMERGENCY SUPPORT</span>
+                <h3>Heatstroke Emergency?</h3>
+                <p>Learn how to respond to heatstroke.</p>
+            </div>
+
+            <button type="button" onclick="showEmergency()">
+                VIEW FIRST AID →
+            </button>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+        <p>SMART HEAT GUARD</p>
+
+        <small>
+            Science • Technology • Engineering • Mathematics
+        </small>
+
+        <small>
+            Educational project | Not a medical diagnostic device
+        </small>
+    </footer>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
