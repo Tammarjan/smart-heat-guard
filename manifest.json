@@ -1,11 +1,39 @@
 {
-  "name": "SMART HEAT GUARD",
+  "id": "./",
+  "name": "SMART HEAT GUARD - Sindh",
   "short_name": "Heat Guard",
   "description": "Sindh Heatwave Safety and Hydration Guide",
-  "start_url": "./index.html",
+  "start_url": "./",
   "scope": "./",
   "display": "standalone",
   "orientation": "portrait",
+  "theme_color": "#101820",
   "background_color": "#101820",
-  "theme_color": "#101820"
+  "lang": "en",
+  "dir": "ltr",
+  "categories": [
+    "health",
+    "education",
+    "utilities"
+  ],
+  "icons": [
+    {
+      "src": "./icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./icon-512-maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
 }
