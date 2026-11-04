@@ -28,6 +28,8 @@
             <span class="status-dot"></span>
             SYSTEM ACTIVE
         </div>
+      <link rel="manifest" href="./manifest.json">
+<meta name="theme-color" content="#101820">
     </header>
 
     <main>
@@ -247,6 +249,14 @@
 </div>
 
 <script src="script.js"></script>
-
+<script>
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("./service-worker.js")
+      .then(() => console.log("Offline support enabled"))
+      .catch(error => console.error("Service Worker Error:", error));
+  });
+}
+                              </script>
 </body>
 </html>

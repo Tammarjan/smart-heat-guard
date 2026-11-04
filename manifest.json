@@ -1,0 +1,11 @@
+{
+  "name": "SMART HEAT GUARD",
+  "short_name": "Heat Guard",
+  "description": "Sindh Heatwave Safety and Hydration Guide",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#101820",
+  "theme_color": "#101820"
+}
